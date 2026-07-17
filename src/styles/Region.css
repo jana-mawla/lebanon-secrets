@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-bottom: 24px;
+}
+.breadcrumb a { color: var(--gold); }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .current { color: var(--dark-green); font-weight: 600; }
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .region-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .region-grid { grid-template-columns: 1fr; }
+}

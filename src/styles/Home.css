@@ -1,0 +1,216 @@
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+  transform: scale(1.05);
+}
+.hero-bg.active {
+  opacity: 1;
+  animation: kenburns 6s ease forwards;
+}
+@keyframes kenburns {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1.14);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 28, 20, 0.55),
+    rgba(15, 28, 20, 0.25)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  max-width: 760px;
+}
+.hero-title {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  line-height: 1.25;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+.hero-title span {
+  color: var(--gold-light);
+}
+
+.hero-subtitle {
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  line-height: 1.9;
+  margin: 22px auto 40px;
+  max-width: 560px;
+  color: #f0ece0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+.hero-btn {
+  font-size: 1.1rem;
+  padding: 15px 38px;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+.hero-dots button {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: var(--transition);
+}
+.hero-dots button.active {
+  background: var(--gold-light);
+  width: 30px;
+  border-radius: 999px;
+}
+/* ---------- Video preview ---------- */
+.video-card {
+  position: relative;
+  z-index: 5;
+  margin-top: -65px;
+  padding: 0;
+  height: 360px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--dark-green);
+  box-shadow: var(--shadow-hover);
+}
+
+/* video fills the whole card */
+.home-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* dark overlay before playing */
+.video-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 28, 20, 0.22),
+    rgba(15, 28, 20, 0.58)
+  );
+  pointer-events: none;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+/* remove overlay when playing */
+.video-card.playing::after {
+  opacity: 0;
+}
+
+/* centered play button */
+.play-btn {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(244, 239, 227, 0.92);
+  color: var(--dark-green);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  z-index: 4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.play-btn:hover {
+  transform: scale(1.12);
+  background: #fff;
+}
+
+/* text inside video card */
+.video-info {
+  position: absolute;
+  right: 34px;
+  bottom: 32px;
+  z-index: 4;
+  text-align: right;
+  color: #fff;
+}
+
+.video-info h3 {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  color: #fff;
+  margin-bottom: 4px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+}
+
+.video-info p {
+  color: rgba(244, 239, 227, 0.88);
+  font-size: 0.95rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 700px) {
+  .video-card {
+    height: 260px;
+    margin-top: -55px;
+  }
+
+  .play-btn {
+    width: 62px;
+    height: 62px;
+  }
+
+  .video-info {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-card {
+    height: 210px;
+  }
+
+  .video-info h3 {
+    font-size: 1rem;
+  }
+
+  .video-info p {
+    font-size: 0.8rem;
+  }
+
+  .play-btn {
+    width: 54px;
+    height: 54px;
+  }
+}

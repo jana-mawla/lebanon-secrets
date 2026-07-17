@@ -1,0 +1,98 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 239, 227, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(184, 137, 66, 0.25);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo on the RIGHT: in RTL it's the first flex item = right side */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  order: -1;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark-text);
+  position: relative;
+  padding: 6px 2px;
+  transition: var(--transition);
+}
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: var(--transition);
+}
+.nav-item:hover,
+.nav-item.active {
+  color: var(--dark-green);
+}
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  padding: 6px;
+}
+.navbar-toggle span {
+  width: 26px;
+  height: 2.5px;
+  background: var(--dark-green);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+@media (max-width: 880px) {
+  .navbar-toggle {
+    display: flex;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--beige);
+    border-bottom: 1px solid rgba(184, 137, 66, 0.25);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .navbar-links.open {
+    max-height: 340px;
+  }
+  .nav-item {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(184, 137, 66, 0.12);
+  }
+}
