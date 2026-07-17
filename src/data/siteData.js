@@ -420,6 +420,20 @@ export const placesData = {
         "/images/khiam-plain-4.jpeg",
       ],
     },
+    {
+      id: "qana-secret",
+      name: "قانا",
+      short: "أرضٌ تحمل أحد أعظم الأسرار التاريخية والدينية في لبنان.",
+      image: "/images/qana-mainpic.jpeg",
+      isSecret: true,
+      secretMode: "page",
+      secretId: "qana-secret",
+      description: [
+        "أرضٌ أقدم من التاريخ... وأسرارٌ أخفاها البشر عن مهد المسيح!",
+        "اضغط على زر «اكتشف السر» وشاهد الفيديو لكشف السر العظيم.",
+      ],
+      gallery: ["/images/qana-mainpic.jpeg"],
+    },
   ],
 };
 
@@ -469,6 +483,13 @@ export const secretsData = {
       "جدران عاصرت القرون، وتحولات دينية وحضارية خبّأت خلفها أسراراً وحكايات لا تُصدق. شاهد الفيديو لتكتشف السر المدفون للجامع العمري الكبير، أحد أقدم وأهم معالم بيروت التاريخية.",
     video: "/videos/omari-mosque-video.mp4",
     poster: "/images/omari-mosque-mainpic.jpeg",
+  },
+  "qana-secret": {
+    title: "سر قانا",
+    story:
+      "هنا يوضع النص الذي يظهر بجانب الفيديو أو تحته، ويقدّم تمهيداً للسر دون الكشف عنه بالكامل.",
+    video: "/videos/qana-secret-video.mp4",
+    poster: "/images/qana-mainpic.jpeg",
   },
 };
 
