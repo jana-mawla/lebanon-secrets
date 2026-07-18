@@ -21,8 +21,9 @@ import "../styles/Footer.css";
         <div className="footer-col">
           {" "}
           <h4>اكتشف السر</h4> <Link to="/region/mount-lebanon">جبل لبنان</Link>{" "}
-          <Link to="/region/bekaa">بعلبك الهرمل</Link>{" "}
+          <Link to="/region/baalbek-hermel">بعلبك الهرمل</Link>{" "}
           <Link to="/region/south">الجنوب</Link>{" "}
+          <Link to="/region/beirut">بيروت</Link>{" "}
         </div>{" "}
         <div className="footer-col">
           {" "}
