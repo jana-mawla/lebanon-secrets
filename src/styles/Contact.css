@@ -31,7 +31,10 @@
   border-color: var(--dark-green);
   background: #fff;
 }
-.contact-submit { margin-top: 6px; justify-content: center; }
+.contact-submit {
+  margin-top: 6px;
+  justify-content: center;
+}
 .contact-sent {
   text-align: center;
   color: var(--dark-green);
@@ -46,7 +49,10 @@
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(184, 137, 66, 0.15);
 }
-.contact-intro { color: var(--muted-text); margin-bottom: 24px; }
+.contact-intro {
+  color: var(--muted-text);
+  margin-bottom: 24px;
+}
 .info-row {
   display: flex;
   align-items: center;
@@ -64,10 +70,43 @@
   place-items: center;
   flex: 0 0 auto;
 }
-.contact-social { margin-top: 24px; color: #fff; }
-.contact-social a { background: var(--dark-green); }
-.contact-social a:hover { background: var(--gold); }
+.contact-social {
+  margin-top: 24px;
+  color: #fff;
+}
+.contact-social a {
+  background: var(--dark-green);
+}
+.contact-social a:hover {
+  background: var(--gold);
+}
+.contact-story {
+  justify-content: center;
+  text-align: center;
+  min-height: 100%;
+}
+
+.contact-story h2 {
+  font-family: var(--font-heading);
+  color: var(--dark-green);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contact-story p {
+  color: var(--muted-text);
+  line-height: 2;
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+.phone-numbers {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
 
 @media (max-width: 820px) {
-  .contact-layout { grid-template-columns: 1fr; }
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
 }

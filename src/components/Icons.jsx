@@ -43,19 +43,43 @@ export const CloseIcon = ({ size = 24 }) => (
 );
 
 /* Social row used in footer & contact */
+/* Social row used in footer & contact */
 export const SocialIcons = ({ className = "" }) => (
   <div className={`social-row ${className}`}>
-    <a href="#" aria-label="Facebook">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V8c0-1.1.5-2 2-2h2V2.1C17.7 2 16.5 2 15.6 2 12.7 2 11 3.7 11 6.7V10H8v4h3v8h2z"/></svg>
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/share/1BV6b5XhQD/?mibextid=wwXIfr"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 22v-8h3l1-4h-4V8c0-1.1.5-2 2-2h2V2.1C17.7 2 16.5 2 15.6 2 12.7 2 11 3.7 11 6.7V10H8v4h3v8h2z" />
+      </svg>
     </a>
-    <a href="#" aria-label="Instagram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3 0 4.1.1 1 0 1.7.2 2.3.5.6.2 1.1.5 1.6 1 .5.5.8 1 1 1.6.3.6.4 1.3.5 2.3.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 1-.2 1.7-.5 2.3-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6 1-.6.3-1.3.4-2.3.5-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1-.1-1.7-.2-2.3-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-1-1.6-.3-.6-.4-1.3-.5-2.3C2 15 2 14.7 2 12s0-3 .1-4.1c.1-1 .2-1.7.5-2.3.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-1 .6-.3 1.3-.4 2.3-.5C9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.8 7.2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/alhakaya_almakhfiya?igsh=MXdsYjkxMjJwcG14aQ%3D%3D&utm_source=qr"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2c2.7 0 3 0 4.1.1 1 0 1.7.2 2.3.5.6.2 1.1.5 1.6 1 .5.5.8 1 1 1.6.3.6.4 1.3.5 2.3.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 1-.2 1.7-.5 2.3-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6 1-.6.3-1.3.4-2.3.5-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1-.1-1.7-.2-2.3-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-1-1.6-.3-.6-.4-1.3-.5-2.3C2 15 2 14.7 2 12s0-3 .1-4.1c.1-1 .2-1.7.5-2.3.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-1 .6-.3 1.3-.4 2.3-.5C9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.8 7.2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z" />
+      </svg>
     </a>
-    <a href="#" aria-label="YouTube">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.3-.4-4.9c-.2-.9-.9-1.5-1.7-1.8C19.3 5 12 5 12 5s-7.3 0-8.9.4c-.8.2-1.5.9-1.7 1.8C1 8.7 1 12 1 12s0 3.3.4 4.9c.2.9.9 1.5 1.7 1.8 1.6.3 8.9.3 8.9.3s7.3 0 8.9-.4c.8-.2 1.5-.9 1.7-1.8.4-1.5.4-4.8.4-4.8zM9.7 15.3V8.7l6.2 3.3-6.2 3.3z"/></svg>
-    </a>
-    <a href="#" aria-label="TikTok">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 2c.3 2.3 1.6 3.9 3.9 4.1V9c-1.4.1-2.7-.3-3.9-1v6.5c0 3.6-3.1 6.3-6.7 5.4-2.3-.6-3.9-2.8-3.7-5.2.2-2.5 2.3-4.4 4.8-4.4.3 0 .6 0 .9.1v3c-.3-.1-.6-.2-.9-.2-1.2 0-2.1 1-2 2.2 0 1.1 1 2 2.1 2 1.2 0 2.2-.9 2.2-2.1V2H16z"/></svg>
+
+    {/* TikTok */}
+    <a
+      href="https://www.tiktok.com/@alhakaya.almakhfiya?_r=1&_t=ZS-986t4er03sY"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 2c.3 2.3 1.6 3.9 3.9 4.1V9c-1.4.1-2.7-.3-3.9-1v6.5c0 3.6-3.1 6.3-6.7 5.4-2.3-.6-3.9-2.8-3.7-5.2.2-2.5 2.3-4.4 4.8-4.4.3 0 .6 0 .9.1v3c-.3-.1-.6-.2-.9-.2-1.2 0-2.1 1-2 2.2 0 1.1 1 2 2.1 2 1.2 0 2.2-.9 2.2-2.1V2H16z" />
+      </svg>
     </a>
   </div>
 );

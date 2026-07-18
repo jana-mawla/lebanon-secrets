@@ -475,7 +475,7 @@ export const secretsData = {
     story:
       "تحت قلعة زرعون يرقد عالمٌ سفلي غامض مليء بالخبايا والأسرار التي بناها اللمعيون بعيداً عن الأنظار، لتبقى لغزاً ينتظر من يكتشفه. شاهد الفيديو لتتعرف على القصص والروايات المرتبطة بهذا المعلم التاريخي.",
     video: "/videos/zaroun-castle-video.mp4",
-    poster: "/images/qasouf-palace-mainpic.jpeg",
+    poster: "/images/zaroun-castle-mainpic.jpeg",
   },
   "omari-mosque": {
     title: "سر الجامع العمري الكبير",
