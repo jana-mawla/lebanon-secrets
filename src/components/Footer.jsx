@@ -7,15 +7,8 @@ import "../styles/Footer.css";
     <footer className="footer">
       {" "}
       <div className="footer-top">
-        {" "}
-        <Logo size={80} />{" "}
-        <h3 className="footer-brand">
-          {" "}
-          لبنان... <br /> <span>أرض الأسرار والحكايات</span>{" "}
-        </h3>{" "}
-        <p className="footer-tag">من كل حجر حكاية</p>{" "}
-        <div className="footer-divider" />{" "}
-      </div>{" "}
+        <Logo size={80} /> <div className="footer-divider" />
+      </div>
       <div className="footer-cols container">
         {" "}
         <div className="footer-col">
