@@ -47,10 +47,41 @@ export default function Home() {
             <br />
             <span>أرض الأسرار والحكايات</span>
           </h1>
+          {/* ---------- VIDEO PREVIEW CARD ---------- */}
+          <div className={`video-card ${videoPlaying ? "playing" : ""}`}>
+            <video
+              ref={videoRef}
+              src="/videos/home-video22.mp4"
+              poster="/images/video-previewpic.jpeg"
+              className="home-video"
+              controls={videoPlaying}
+              onPause={() => setVideoPlaying(false)}
+              onEnded={() => setVideoPlaying(false)}
+            >
+              المتصفح لا يدعم تشغيل الفيديو.
+            </video>
+
+            {!videoPlaying && (
+              <>
+                <button
+                  className="play-btn"
+                  aria-label="تشغيل الفيديو"
+                  onClick={handleVideoPlay}
+                >
+                  <PlayIcon size={34} />
+                </button>
+
+                <div className="video-info">
+                  <h3>لبنان... رحلة لا تنتهي</h3>
+                  <p>شاهد الفيديو</p>
+                </div>
+              </>
+            )}
+          </div>
+
           <p className="hero-subtitle">
-            رحلة عبر الزمن لاكتشاف أسرار لبنان الخفية؛ من المعابد والقلاع إلى
-            المغارات والوديان، حيث يروي كل مكان حكاية، ويخفي كل أثر سرًا لم
-            يُكشف بعد.
+            ليست كل الحكايات تُروى… وبعض الأسرار لا تُكشف إلا لمن يبحث عنها.
+            اختر وجهتك… واتبع أثر الحكاية
           </p>
           <button
             className="btn hero-btn"
@@ -59,53 +90,8 @@ export default function Home() {
             <PinIcon size={18} /> ابدأ الاكتشاف
           </button>
         </div>
-
-        {/* carousel dots */}
-        <div className="hero-dots">
-          {heroImages.map((_, i) => (
-            <button
-              key={i}
-              className={i === slide ? "active" : ""}
-              onClick={() => setSlide(i)}
-              aria-label={`صورة ${i + 1}`}
-            />
-          ))}
-        </div>
       </section>
 
-      {/* ---------- VIDEO PREVIEW CARD ---------- */}
-      <section className="container">
-        <div className={`video-card card ${videoPlaying ? "playing" : ""}`}>
-          <video
-            ref={videoRef}
-            src="/videos/home-video.mp4"
-            poster="/images/video-previewpic.jpeg"
-            className="home-video"
-            controls={videoPlaying}
-            onPause={() => setVideoPlaying(false)}
-            onEnded={() => setVideoPlaying(false)}
-          >
-            المتصفح لا يدعم تشغيل الفيديو.
-          </video>
-
-          {!videoPlaying && (
-            <>
-              <button
-                className="play-btn"
-                aria-label="تشغيل الفيديو"
-                onClick={handleVideoPlay}
-              >
-                <PlayIcon size={34} />
-              </button>
-
-              <div className="video-info">
-                <h3>لبنان... رحلة لا تنتهي</h3>
-                <p>شاهد الفيديو</p>
-              </div>
-            </>
-          )}
-        </div>
-      </section>
       {/* ---------- POETIC LINE ---------- */}
       <div className="ornament">تحت كل حجر... حكاية</div>
     </div>

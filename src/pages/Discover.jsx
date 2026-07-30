@@ -23,7 +23,14 @@ export default function Discover() {
                 alt="خريطة لبنان"
                 className="lebanon-map-img"
               />
-
+              <button
+                className="map-hotspot north"
+                onClick={() => goToRegion("north")}
+                aria-label="الشمال"
+              >
+                <span className="hotspot-pin" />
+                <span>الشمال</span>
+              </button>
               <button
                 className="map-hotspot mount-lebanon"
                 onClick={() => goToRegion("mount-lebanon")}
@@ -50,7 +57,14 @@ export default function Discover() {
                 <span className="hotspot-pin" />
                 <span>بعلبك الهرمل</span>
               </button>
-
+              <button
+                className="map-hotspot bekaa"
+                onClick={() => goToRegion("bekaa")}
+                aria-label="البقاع"
+              >
+                <span className="hotspot-pin" />
+                <span>البقاع</span>
+              </button>
               <button
                 className="map-hotspot south"
                 onClick={() => goToRegion("south")}

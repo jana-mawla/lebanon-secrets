@@ -89,6 +89,16 @@
   left: 35%;
 }
 
+.north {
+  top: 20%;
+  left: 55%;
+}
+
+.bekaa {
+  top: 55%;
+  left: 49%;
+}
+
 /* HINT UNDER MAP */
 .map-hint {
   display: inline-flex;

@@ -1,4 +1,5 @@
 import { aboutCards } from "../data/siteData";
+import { useState } from "react";
 import "../styles/About.css";
 
 /* About Us — intro paragraph + cedar image + 3 value cards. */
@@ -8,7 +9,24 @@ const cardIcon = {
   key: <KeyRound size={30} />,
   sparkles: <Sparkles size={30} />,
 };
+const aboutDetails = {
+  حكايتنا: {
+    title: "حكايتنا",
+    text: "بدأت فكرة مشروعنا من شغفنا بلبنان وتاريخه الغني. لاحظنا أن الكثير من الأماكن والقصص التراثية بقيت مجهولة أو نُسيت مع مرور الوقت، لذلك أنشأنا هذا الموقع ليكون مساحة تجمع هذه الكنوز في مكان واحد، وتعرّف الزوار على جمال لبنان بطريقة حديثة وممتعة.",
+  },
+
+  رسالتنا: {
+    title: "رسالتنا",
+    text: "نسعى إلى إحياء التراث اللبناني من خلال توثيق الأماكن التاريخية والقصص والأسرار المرتبطة بها، وتقديمها بأسلوب بسيط وجذاب يشجّع الجميع على استكشافها والحفاظ عليها للأجيال القادمة.",
+  },
+
+  غايتنا: {
+    title: "غايتنا",
+    text: "أن يصبح موقعنا مرجعًا رقميًا لكل من يرغب في اكتشاف لبنان بطريقة مختلفة، من خلال إبراز هويته الثقافية والتاريخية، وتعزيز الوعي بأهمية المحافظة على إرثه الغني وتشجيع السياحة الداخلية.",
+  },
+};
 export default function About() {
+  const [selectedCard, setSelectedCard] = useState(null);
   return (
     <div className="about-page section">
       <div className="container">
@@ -25,13 +43,17 @@ export default function About() {
             </p>
           </div>
           <div className="about-img">
-            <img src="/images/aboutus.jpeg" alt="about us" />
+            <img src="/images/aboutus2.jpeg" alt="about us" />
           </div>
         </div>
 
         <div className="about-cards">
           {aboutCards.map((c, i) => (
-            <div className="about-card card" key={i}>
+            <div
+              className="about-card card"
+              key={i}
+              onClick={() => setSelectedCard(aboutDetails[c.title])}
+            >
               <span className="about-card-icon">{cardIcon[c.icon]}</span>
               <h3>{c.title}</h3>
               <p>{c.text}</p>
@@ -53,6 +75,37 @@ export default function About() {
             </p>
           </div>
         </div>
+        {selectedCard && (
+          <div
+            className="about-modal-overlay"
+            onClick={() => setSelectedCard(null)}
+          >
+            <div className="about-modal" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="about-modal-close"
+                onClick={() => setSelectedCard(null)}
+              >
+                ✕
+              </button>
+
+              <div className="about-modal-icon">
+                {
+                  cardIcon[
+                    selectedCard.title === "حكايتنا"
+                      ? "book"
+                      : selectedCard.title === "رسالتنا"
+                        ? "key"
+                        : "sparkles"
+                  ]
+                }
+              </div>
+
+              <h2>{selectedCard.title}</h2>
+
+              <p>{selectedCard.text}</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

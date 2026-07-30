@@ -12,9 +12,7 @@ export default function Forgotten() {
     <div className="forgotten-page section">
       <div className="container">
         <h1 className="section-title">منسيات</h1>
-        <p className="section-subtitle">
-          حكايات من الناس، أماكن، وتجارب لا تُنسى
-        </p>
+        <p className="section-subtitle">حكايات..أماكن..تجارب لا تنسى </p>
 
         {/* masonry grid */}
         <div className="masonry">
