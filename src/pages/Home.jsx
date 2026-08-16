@@ -51,7 +51,7 @@ export default function Home() {
           <div className={`video-card ${videoPlaying ? "playing" : ""}`}>
             <video
               ref={videoRef}
-              src="/videos/home-video22.mp4"
+              src="/videos/final_home_video.mp4"
               poster="/images/video-previewpic.jpeg"
               className="home-video"
               controls={videoPlaying}
@@ -87,7 +87,7 @@ export default function Home() {
             className="btn hero-btn"
             onClick={() => navigate("/discover")}
           >
-            <PinIcon size={18} /> ابدأ الاكتشاف
+            <PinIcon size={18} /> اكتشف السر{" "}
           </button>
         </div>
       </section>

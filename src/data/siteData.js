@@ -38,7 +38,7 @@ export const regionsData = [
   },
   {
     id: "bekaa",
-    name: "البقاع",
+    name: "البقاع الغربي",
     color: "#8d6b2f",
     subtitle: "اختر المعلم الذي تريد استكشافه",
     description: "سهول وأنهار وبحيرات تخفي أسرار الطبيعة والتاريخ.",

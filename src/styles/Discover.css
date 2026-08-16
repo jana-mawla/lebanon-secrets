@@ -96,7 +96,7 @@
 
 .bekaa {
   top: 55%;
-  left: 49%;
+  left: 42%;
 }
 
 /* HINT UNDER MAP */
@@ -180,6 +180,10 @@
   .south {
     top: 70%;
     left: 36%;
+  }
+  .bekaa {
+    top: 55%;
+    left: 51%;
   }
 
   .map-hint {

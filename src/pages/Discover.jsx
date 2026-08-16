@@ -63,7 +63,7 @@ export default function Discover() {
                 aria-label="البقاع"
               >
                 <span className="hotspot-pin" />
-                <span>البقاع</span>
+                <span>البقاع الغربي</span>
               </button>
               <button
                 className="map-hotspot south"
