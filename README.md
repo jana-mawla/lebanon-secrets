@@ -30,19 +30,3 @@ src/
   styles/              # ملفات CSS لكل صفحة/مكوّن
 public/images/         # الصور (placeholders حالياً — استبدلها بصورك)
 ```
-
-## استبدال الصور والنصوص
-
-- **الصور:** ضع صورك في `public/images/` بنفس أسماء الملفات الموجودة
-  (مثل `hero-1.jpg`, `baalbek.jpg`, `cedar.jpg`...).
-- **النصوص والبيانات:** كلها في `src/data/siteData.js`:
-  - `regionsData` — المناطق (جبل لبنان، البقاع، الجنوب — بدون الشمال)
-  - `placesData` — 4 أماكن لكل منطقة (الرابع يحمل السر `isSecret: true`)
-  - `placeDetailsData` — تفاصيل صفحة المكان
-  - `secretsData` — قصص "السر الأكبر"
-  - `forgottenItemsData` — بطاقات "منسيات"
-  - `heroImages`, `aboutCards`
-
-## الألوان والخطوط
-
-عدّلها في `src/styles/global.css` ضمن `:root`.
